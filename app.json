@@ -1,30 +1,49 @@
 {
   "expo": {
-    "name": "loyus",
+    "name": "Loyus",
     "slug": "loyus",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
+    "scheme": "loyus",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.loyus.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Loyus needs camera access to scan barcodes on your loyalty cards."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "package": "com.loyus.app",
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "edgeToEdgeEnabled": false
     },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+    "plugins": [
+      "expo-router",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Loyus needs camera access to scan barcodes on your loyalty cards."
+        }
+      ],
+      [
+        "expo-brightness",
+        {
+          "isIosSystemBrightnessPermissionGranted": true
+        }
+      ],
+    ]
   }
 }
