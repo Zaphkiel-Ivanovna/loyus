@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.loyus.app",
+      "bundleIdentifier": "dev.zaphkiel.loyus",
       "infoPlist": {
         "NSCameraUsageDescription": "Loyus needs camera access to scan barcodes on your loyalty cards."
       }
@@ -24,7 +24,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.loyus.app",
+      "package": "dev.zaphkiel.loyus",
       "permissions": [
         "android.permission.CAMERA"
       ],
